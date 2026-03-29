@@ -1,2 +1,7 @@
-# Javascript-
-2D Boss Battle Game implemented in Vanilla JavaScript. (Educational project for CS transfer application).
+# JavaScript 2D 動作遊戲實作：明日方舟二創練習
+
+這是為了 115 學年度轉資工系申請所準備的技術作品集。
+
+## ⚠️ 版權聲明
+- 本專案僅供學術交流與技術練習使用，非商業用途。
+- 美術與音效素材版權歸屬 **《明日方舟 / Arknights》** 官方所有。
