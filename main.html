@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>明日方舟戰鬥小遊戲</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div id="mainMenu" style="z-index: 100;">
+    <h1>明日方舟戰鬥小遊戲</h1>
+    <p>ver: 1.0a</p>
+    <p>本作品為同人創作，素材取自《明日方舟》（Arknights），</p>
+    <p>僅供非商業用途，若有侵權請告知將立即下架。</p>
+    <button onclick="readyGame()">開始遊戲</button>
+    <button onclick="showUpdate()">更新內容</button>
+    <button onclick="showWorkTeam()">製作團隊</button>
+  </div>
+
+  <div id="tutorialMenu" style="display: none;">
+    <h1>操作說明:</h1>
+    <p>A、D 分別控制左和右</p>
+    <p>按空白鍵可以進行跳躍</p>
+    <p>按住shift鍵可以進行衝刺</p>
+    <p># 但衝刺和跳躍會消耗體力(左上角有體力條)</p>
+    <p>左鍵點擊可以進行近戰攻擊</p>
+    <p>左鍵長按對鼠標位置進行遠程攻擊</p>
+    <p>想辦法打到敵人吧!!!</p>
+    <p>祝你好運! XD</p>
+    <button onclick="startGame()">我知道了!</button>
+  </div>
+
+  <div id="winScreen" style="display: none; z-index: 100;">
+    <h1>Congraduation!</h1>
+    <h1>You Win!</h1>
+    <button onclick="backToMenu()">返回主選單</button>
+  </div>
+
+  <div id="gameOverScreen" style="display: none; z-index: 100;">
+    <h1>Game Over! Noob!</h1>
+    <button onclick="troll()">復活</button>
+    <button onclick="backToMenu()">返回主選單</button>
+  </div>
+
+
+
+  <div id="playerContainer" style="
+       position: absolute;
+       left: 100px;
+       top: 500px;
+       width: 85px;
+       height: 94px;
+       overflow: hidden;
+       pointer-events: none;
+       display: none;
+     ">
+    <img id="playerSprite" src="./rosmontis_animations/Rosmontis_Idle.gif" style="
+       width: 60px;
+       height: 80px;
+       margin-left: 17px; 
+       margin-top: -6px;
+       transform: scale(2.5);
+       transform-origin: center;
+       pointer-events: none;
+       display: none;
+     " />
+  </div>
+  <div id="bossContainer" style="
+       position: absolute;
+       left: 100px;
+       top: 500px;
+       width: 85px;
+       height: 94px;
+       overflow: hidden;
+       pointer-events: none;
+       display: none;
+     ">
+    <img id="bossSprite" src="./wisadel_animations/Wisadel_Idle.gif" style="
+       width: 60px;
+       height: 80px;
+       margin-left: 17px; 
+       margin-top: -6px;
+       transform: scale(2.5);
+       transform-origin: center;
+       pointer-events: none;
+       display: none;
+     " />
+  </div>
+
+
+
+  <canvas id="gameCanvas" width="1400" height="750" style="display: none;"></canvas>
+</body>
+<script type="module" src="js/main.js"></script>
+<script type="module" src="js/audio.js"></script>
+
+
+</html>
